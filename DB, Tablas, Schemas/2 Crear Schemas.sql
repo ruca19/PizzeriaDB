@@ -1,0 +1,3 @@
+CREATE SCHEMA Tablas
+GO
+CREATE SCHEMA Admins
