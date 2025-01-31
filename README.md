@@ -10,23 +10,23 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
   - `orders`, `order_details`, `pizzas`, `pizza_types`.  
 - **Elementos avanzados**:  
   - **Funciones**: Consultas útiles para ingresos, disponibilidad, y análisis de ventas.  
-	- Tablas.TotalIngresos			
-		– Ingresos entre 2 fechas
-	- Tablas.PizzaActiva				
-		– Comprobar disponibilidad pizza
-	- Tablas.PizzasMenosVentas		
-		– Top 2 Pizzas con menos ventas en un periodo
-	- Tablas.PizzasMasVentas			
-		– Top 2 Pizzas con mas ventas en un periodo
+	- Tablas.TotalIngresos
+    		– Ingresos entre 2 fechas
+	- Tablas.PizzaActiva
+  		-  Comprobar disponibilidad pizza
+	- Tablas.PizzasMenosVentas
+		- Top 2 Pizzas con menos ventas en un periodo
+	- Tablas.PizzasMasVentas
+  		-  Top 2 Pizzas con mas ventas en un periodo
   - **Vistas**: Resúmenes de ventas y stock de pizzas.  
-	- Tablas.VentasUltimaSemana		
-		– Ventas Ultimos 7 Dias
-	- Tablas.VentasDiaPorPizza        
-		– Ver Venta Diaria por pizzas
-	- Tablas.VentasDiaTotales         	
-		– Ver totales y cantidades de ventas
-	- Tablas.StockPizzas				
-		– Ver Disponibilidad o stock disponible
+	- Tablas.VentasUltimaSemana
+  		- Ventas Ultimos 7 Dias
+	- Tablas.VentasDiaPorPizza
+  		- Ver Venta Diaria por pizzas
+	- Tablas.VentasDiaTotales
+  		- Ver totales y cantidades de ventas
+	- Tablas.StockPizzas
+  		- Ver Disponibilidad o stock disponible
   - **Triggers**: Auditoría de modificaciones y validaciones.  
 	- Tablas.TRIG_RegistrarModificacionesOrder_Details			
 		- Registrar modificaciones de la Tabla order_details en tabla Admins.ModifTablas
