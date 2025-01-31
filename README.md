@@ -11,7 +11,7 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
 - **Elementos avanzados**:  
   - **Funciones**: Consultas útiles para ingresos, disponibilidad, y análisis de ventas.  
 	- Tablas.TotalIngresos
-    		– Ingresos entre 2 fechas
+  		- Ingresos entre 2 fechas
 	- Tablas.PizzaActiva
   		-  Comprobar disponibilidad pizza
 	- Tablas.PizzasMenosVentas
