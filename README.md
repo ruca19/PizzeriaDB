@@ -38,8 +38,6 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
 		- Registrar modificaciones de la Tabla pizzas en tabla Admins.ModifTablas
 	- Tablas.TRIG_Ordenes											
 		- Revertir pedido si se ingresa una cantidad menor a 1 en tabla order_details
-	- Tablas.TRIG_PreciosPizzas									
-		- No se permite insertar o modificar un precio negativo en tabla Pizzas
   - **Procedimientos Almacenados (SP)**: Automatización de operaciones comunes (pedidos, precios, etc.).  
 	- Tablas.DEL_EliminarPedido									
 		- Eliminar un pedido si cliente ya no quiere de tablas orders y order_details
@@ -47,8 +45,6 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
 		- Insertar pedido en tablas orders y order_details
 	- Tablas.INS_NuevaPizza										
 		- Añadir un nuevo tipo de pizza en tablas pizzas y pizza_types
-	- Tablas.UPD_CambiarPrecio									
-		- Modificar precio de una pizza existente en tabla pizzas
 	- Tablas.UPD_DisponibilidadPizza								
 		- Cambiar disponibilidad de la pizza en el menu
 	- Tablas.UPD_ModificarPedido									
@@ -64,7 +60,7 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
 		- Empleado1, Empleado2....
 	- Roles
 		- Jefe: Acceso a ambos Schemas, asi podrá monitorear ventas de cada empleado y posibles modificaciones o eliminaciones de pedidos. Tiene poder sobre todo
-		- Encargado: Acceso a Schema Tablas. Ademas de lo que puede hacer un empleado, podrá modificar o eliminar un pedido existente, modificar precio y disponibilidad de una pizza y usar las funciones y vistas. Lo que no puede hacer es modificar las tablas, sp, triggers, funciones... que hayan en el SCHEMA Tablas
+		- Encargado: Acceso a Schema Tablas. Ademas de lo que puede hacer un empleado, podrá modificar o eliminar un pedido existente, modificar disponibilidad de una pizza y usar las funciones y vistas. Lo que no puede hacer es modificar las tablas, sp, triggers, funciones... que hayan en el SCHEMA Tablas
 		- Empleado: Acceso a Schema Tablas. Solo podrá insertar pedido, ver ventas diarias, ver pizzas disponibles en el menú.  
 
 
