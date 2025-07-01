@@ -38,7 +38,7 @@ Este proyecto implementa una base de datos relacional para una pizzería, diseñ
 		- Registrar modificaciones de la Tabla pizzas en tabla Admins.ModifTablas
 	- Tablas.TRIG_Ordenes											
 		- Revertir pedido si se ingresa una cantidad menor a 1 en tabla order_details
-  - **Procedimientos Almacenados (SP)**: Automatización de operaciones comunes (pedidos, precios, etc.).  
+  - **Procedimientos Almacenados (SP)**: Automatización de operaciones comunes (pedidos etc.).  
 	- Tablas.DEL_EliminarPedido									
 		- Eliminar un pedido si cliente ya no quiere de tablas orders y order_details
 	- Tablas.INS_PedidoPizza										
