@@ -1,26 +1,24 @@
 /*
 Nombres de funciones:
-	Tablas.TotalIngresos			– Ingresos entre 2 fechas
-	Tablas.PizzaActiva				– Comprobar disponibilidad pizza
-	Tablas.PizzasMenosVentas		– Top 2 Pizzas con menos ventas en un periodo
-	Tablas.PizzasMasVentas			– Top 2 Pizzas con mas ventas en un periodo
+	Tablas.TotalIngresos			â€“ Ingresos entre 2 fechas
+	Tablas.PizzaActiva				â€“ Comprobar disponibilidad pizza
+	Tablas.PizzasMenosVentas		â€“ Top 2 Pizzas con menos ventas en un periodo
+	Tablas.PizzasMasVentas			â€“ Top 2 Pizzas con mas ventas en un periodo
 Nombre de Vistas:
-	Tablas.VentasUltimaSemana		– Ventas Ultimos 7 Dias
-	Tablas.VentasDiaPorPizza        – Ver Venta Diaria por pizzas
-	Tablas.VentasDiaTotales         – Ver totales y cantidades de ventas
-	Tablas.StockPizzas				– Ver Disponibilidad o stock disponible
+	Tablas.VentasUltimaSemana		â€“ Ventas Ultimos 7 Dias
+	Tablas.VentasDiaPorPizza        â€“ Ver Venta Diaria por pizzas
+	Tablas.VentasDiaTotales         â€“ Ver totales y cantidades de ventas
+	Tablas.StockPizzas				â€“ Ver Disponibilidad o stock disponible
 Nombre de Triggers:
 	Tablas.TRIG_RegistrarModificacionesOrder_Details			-- Registrar modificaciones de la Tabla order_details en tabla Admins.ModifTablas
 	Tablas.TRIG_RegistrarModificacionesOrders					-- Registrar modificaciones de la Tabla orders en tabla Admins.ModifTablas
 	Tablas.TRIG_RegistrarModificacionesPizza_Types				-- Registrar modificaciones de la Tabla pizza_types en tabla Admins.ModifTablas
 	Tablas.TRIG_RegistrarModificacionesPizzas					-- Registrar modificaciones de la Tabla pizzas en tabla Admins.ModifTablas
 	Tablas.TRIG_Ordenes											-- Revertir pedido si se ingresa una cantidad menor a 1 en tabla order_details
-	Tablas.TRIG_PreciosPizzas									-- No se permite insertar o modificar un precio negativo en tabla Pizzas
 Nombre de SP
 	Tablas.DEL_EliminarPedido									-- Eliminar un pedido si cliente ya no quiere de tablas orders y order_details
 	Tablas.INS_PedidoPizza										-- Insertar pedido en tablas orders y order_details
-	Tablas.INS_NuevaPizza										-- Añadir un nuevo tipo de pizza en tablas pizzas y pizza_types
-	Tablas.UPD_CambiarPrecio									-- Modificar precio de una pizza existente en tabla pizzas
+	Tablas.INS_NuevaPizza										-- AÃ±adir un nuevo tipo de pizza en tablas pizzas y pizza_types
 	Tablas.UPD_DisponibilidadPizza								-- Cambiar disponibilidad de la pizza en el menu
 	Tablas.UPD_ModificarPedido									-- Modificar un pedido existente solo si esta en el menu
 */
@@ -43,10 +41,6 @@ EXEC Tablas.INS_NuevaPizza
 	@price_m=13.5, 
 	@price_l=16, 
 	@activo = 0;
-
-EXEC Tablas.UPD_CambiarPrecio 
-	@pizza_id='bbq_ckn_l', 
-	@price= 21.75
 
 EXEC Tablas.UPD_DisponibilidadPizza 
 	@pizza_id = 'marg_m',
